@@ -50,7 +50,7 @@ export default async function handleVerification(
 
   // Values for the verifier
   const ethStateResolver = new resolver.EthStateResolver(
-    "https://mumbai.rpc.thirdweb.com",
+    "https://polygon-mumbai.g.alchemy.com/v2/PRRrt-YNzgeCHXmVBPelOrLli1yQFd2c",
     mumbaiContractAddress
   );
 

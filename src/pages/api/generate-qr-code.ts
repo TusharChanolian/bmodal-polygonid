@@ -40,17 +40,23 @@ export default async function generateQrCode(
   const scope = request.body.scope ?? [];
   request.body.scope = [
     ...scope,
-    {
+       {
       id: 1,
       circuitId: 'credentialAtomicQuerySigV2',
       query: {
         allowedIssuers: ['*'],
-        type: 'ProofOfHumanity',
-        context: 'https://raw.githubusercontent.com/0xPolygonID/tutorial-examples/main/credential-schema/schemas-examples/proof-of-humanity/proof-of-humanity.jsonld',
+        type: 'ProofOfDaoRole',
+        context: 'https://raw.githubusercontent.com/0xPolygonID/tutorial-examples/main/credential-schema/schemas-examples/proof-of-dao-role/proof-of-dao-role.jsonld',
         credentialSubject: {
-        isHuman: {
-          $eq: 1,
-        },
+          "role": {
+        "$in": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      }     
         },
       },
     }
