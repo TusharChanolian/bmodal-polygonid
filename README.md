@@ -24,7 +24,6 @@ A demo application of how to use [Polygon ID](https://0xpolygonid.github.io/tuto
 10. Scan the QR code from the Polygon ID app to kick off the verification process.
 11. (Optional): Create your own Polybase database using the schema in [PolybaseSchema.txt](./PolybaseSchema.txt) and update the `.env.local`'s `NEXT_PUBLIC_POLYBASE_NAMESPACE` value with your database namespace.
 
-Get stuck? Send me a message in the [Discord](https://discord.com/invite/4eQBm7DDNS) and I'll help you out!
 
 <br/>
 
