@@ -48,7 +48,6 @@ export default function Home() {
 
         {/* Render the verification status */}
         <p className="text-center max-w-2xl mb-4 text-2xl">
-        Your current status:{" "}
         {!!verificationResponse ? (
           <span className="text-green-400">Verified</span>
         ) : (
