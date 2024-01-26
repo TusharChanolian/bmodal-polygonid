@@ -1,4 +1,4 @@
-import { useMemo } from "react";
+import React,{ useMemo } from "react";
 import useGenerateQrCode from "@/hooks/useGenerateQrCode";
 import useCheckForResponse from "@/hooks/useVerificationResponse";
 import { useQRCode } from "next-qrcode";
@@ -25,9 +25,11 @@ export default function Home() {
     !!qrCode
   );
 
-  const navigateToNextPage = () => {
-    router.push("https://votechain.vercel.app"); // Replace "/nextPage" with the actual path of your next page
-  };
+  React.useEffect(() => {
+    if (verificationResponse) {
+      router.push("https://votechain.vercel.app/");
+    }
+  }, [verificationResponse]);
 
   return (
     <main className="flex min-h-screen flex-col items-center p-5 pt-24 text-center">
@@ -56,12 +58,7 @@ export default function Home() {
         {/* Render the verification status */}
         <p className="text-center max-w-2xl mb-4 text-2xl">
         {!!verificationResponse ? (
-          <button
-          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-          onClick={navigateToNextPage}
-        >
-          Go to B-model 
-        </button>
+           <span className="text-red-400"> </span>
         ) : (
           <span className="text-red-400">Not verified</span>
         )}
