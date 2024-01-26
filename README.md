@@ -1,4 +1,4 @@
-## BmodalxPolygonID
+## B-modalxPolygonID
 
 Bmodal using Polygon ID to submit ZK proofs of the user's Dao Role for voting.
 
