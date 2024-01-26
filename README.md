@@ -1,14 +1,6 @@
-## How It Works
+## BmodalxPolygonID
 
-Polygon ID uses a trust triangle between three parties. The **Verifier**, **Prover** (identity holder) and **Issuer**:
-
-1. Prover: The user trying to prove they are of legal age.
-2. Verifier: The website owner, trying to verify that the prover is of legal age.
-3. Issuer: A source of verifiable credentials that the verifier trusts. [(Demo issuer)](https://issuer-demo.polygonid.me/)
-
-![trust triangle](./public/triangle.png)
-
-Using ZK proofs to verify your age as a user involves a 3-step process:
+Bmodal using Polygon ID to submit ZK proofs of the user's Dao Role for voting.
 
 ### 1. Issuer provides the prover with a verifiable credential (VC)
 
