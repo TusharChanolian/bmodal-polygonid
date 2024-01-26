@@ -3,8 +3,11 @@ import useGenerateQrCode from "@/hooks/useGenerateQrCode";
 import useCheckForResponse from "@/hooks/useVerificationResponse";
 import { useQRCode } from "next-qrcode";
 import { v4 as uuidv4 } from "uuid";
+import { useRouter } from "next/router";
+
 
 export default function Home() {
+  const router = useRouter();
   // Generate a unique session ID using uuid library.
   const sessionId = useMemo(() => uuidv4(), []);
 
@@ -21,6 +24,10 @@ export default function Home() {
     sessionId,
     !!qrCode
   );
+
+  const navigateToNextPage = () => {
+    router.push("https://votechain.vercel.app"); // Replace "/nextPage" with the actual path of your next page
+  };
 
   return (
     <main className="flex min-h-screen flex-col items-center p-5 pt-24 text-center">
@@ -49,11 +56,17 @@ export default function Home() {
         {/* Render the verification status */}
         <p className="text-center max-w-2xl mb-4 text-2xl">
         {!!verificationResponse ? (
-          <span className="text-green-400">Verified</span>
+          <button
+          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+          onClick={navigateToNextPage}
+        >
+          Go to B-model 
+        </button>
         ) : (
           <span className="text-red-400">Not verified</span>
         )}
       </p>
+
 
 
  

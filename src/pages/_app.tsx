@@ -9,7 +9,7 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <title>Polygon ID Demo</title>
+        <title>B-modal X Polygon ID</title>
         <meta
           name="description"
           content="A starter kit for building full-stack applications with Polygon ID."

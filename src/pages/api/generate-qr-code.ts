@@ -12,16 +12,13 @@ export default async function generateQrCode(
   // Get the session ID out of the request body.
   const { requestId } = req.body;
 
-  // Create the authorization request
-  // Learn more: https://0xpolygonid.github.io/tutorials/verifier/verification-library/request-api-guide/#createauthorizationrequest
   const request = auth.createAuthorizationRequest(
     // Reason for the authorization request
-    "Must be born before this year",
+    "Must be a Dao Hood",
 
     // Polygon ID of the requester
     process.env.NEXT_PUBLIC_SENDER_DID as string,
 
-    // Callback URL. What API Route to run to verify the proof?
     `${
       process.env.NODE_ENV === "production" // Am I in production?
         ? process.env.NEXT_PUBLIC_PRODUCTION_URL // Yes, use production URL
@@ -29,14 +26,9 @@ export default async function generateQrCode(
     }/api/handle-verification?requestId=${requestId}` // To verify, use the handle-verification API route
   );
 
-  // Set ID and thread ID to the session ID
   request.id = requestId;
   request.thid = requestId;
 
-  // Here, we'll append some extra scope to the request.
-  // This allows us to verify the user's age.
-  // Design your own customised authentication requirement here using Query Language:
-  // https://0xpolygonid.github.io/tutorials/verifier/verification-library/zk-query-language/
   const scope = request.body.scope ?? [];
   request.body.scope = [
     ...scope,
