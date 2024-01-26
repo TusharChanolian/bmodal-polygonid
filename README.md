@@ -1,32 +1,3 @@
-<p align="center">
-  <img src="./public/logo.webp" height="400px"/>
-</p>
-
-<h1 align="center">
-  Polyon ID Demo
-</h1>
-
-A demo application of how to use [Polygon ID](https://0xpolygonid.github.io/tutorials/) in a Next.js application, showing how you can use zero-knowledge proofs to prove that you are over a certain age to the application without revealing your actual birthday.
-
-<br/>
-
-## Running Locally
-
-1. Clone the repository using `git clone`.
-2. Install the dependencies with `npm install`.
-3. Download the Polygon ID app on [iOS](https://apps.apple.com/us/app/polygon-id/id1629870183) or [Android](https://apps.apple.com/us/app/polygon-id/id1629870183).
-4. Follow [Steph's quick setup guide](https://oceans404.notion.site/oceans404/How-to-get-a-KYCAgeCredential-Verifiable-Credential-f3d34e7c98ec4147b6b2fae79066c4f6) to get a demo VC from the [demo issuer](https://issuer-demo.polygonid.me/).
-5. Create a new file called `.env.local` in the root of the project, and copy the contents of `.env.example` into it.
-6. Run `npm run dev` and open [http://localhost:3000](http://localhost:3000) with your browser to start the application.
-7. Install [ngrok](ngrok.com) on your machine so that you can expose your localhost API routes.
-8. Using the ngrok CLI, expose your localhost API routes by running `ngrok http 3000` (for localhost:3000).
-9. Update the `NEXT_PUBLIC_DEVELOPMENT_URL` in the `.env.local` file with your ngrok "Forwarding" URL.
-10. Scan the QR code from the Polygon ID app to kick off the verification process.
-11. (Optional): Create your own Polybase database using the schema in [PolybaseSchema.txt](./PolybaseSchema.txt) and update the `.env.local`'s `NEXT_PUBLIC_POLYBASE_NAMESPACE` value with your database namespace.
-
-
-<br/>
-
 ## How It Works
 
 Polygon ID uses a trust triangle between three parties. The **Verifier**, **Prover** (identity holder) and **Issuer**:
