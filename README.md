@@ -1,6 +1,6 @@
-## B-modalxPolygonID
+## B-modalXPolygonID
 
-Bmodal using Polygon ID to submit ZK proofs of the user's Dao Role for voting.
+B-modal using Polygon ID to submit ZK proofs of the user's Dao Role for voting.
 
 ### 1. Issuer provides the prover with a verifiable credential (VC)
 
