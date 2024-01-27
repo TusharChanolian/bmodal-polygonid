@@ -27,7 +27,7 @@ export default function Home() {
 
   React.useEffect(() => {
     if (verificationResponse) {
-      router.push("https://votechain.vercel.app/");
+      router.push("https://b-modal.vercel.app/");
     }
   }, [verificationResponse]);
 
@@ -54,17 +54,6 @@ export default function Home() {
         </div>
       )}
       <br></br>
-
-        {/* Render the verification status */}
-        <p className="text-center max-w-2xl mb-4 text-2xl">
-        {!!verificationResponse ? (
-           <span className="text-red-400"> </span>
-        ) : (
-          <span className="text-red-400">Not verified</span>
-        )}
-      </p>
-
-
 
  
     </main>
