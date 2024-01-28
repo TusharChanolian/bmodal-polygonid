@@ -12,7 +12,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <title>B-modal X Polygon ID</title>
         <meta
           name="description"
-          content="A starter kit for building full-stack applications with Polygon ID."
+          content="B-MODAL with Polygon ID."
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
