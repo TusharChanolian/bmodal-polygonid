@@ -27,7 +27,7 @@ export default function Home() {
 
   React.useEffect(() => {
     if (verificationResponse) {
-      router.push("https://b-modal.vercel.app/");
+      router.push('https://b-modal.vercel.app',undefined,{shallow:true});
     }
   }, [verificationResponse]);
 
